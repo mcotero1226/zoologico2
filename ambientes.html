@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambientes</title>
+    <link href="bootstrap/css/bootstrap.min.css"  rel="stylesheet" media="screen">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/css_pagina/index_pagina.css">
+
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg green-light">
+      <div class="container-fluid">
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="animales.html">Animales</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ambientes.html">Ambientes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="veterinarios.html">Veterinarios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="visitantes.html">Visitantes</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+</header>
+  
+  
+
+<body>
+
+    <div class="container mt-5">
+        <h1>Ambientes</h1>
+        <div class="table-responsive">
+          <table class="table table-striped table-bordered table-custom">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre del Ambiente</th>
+                        <th scope="col">Tipo de Ambiente</th>
+                        <th scope="col">Ubicación Geográfica</th>
+                        <th scope="col">Superficie Total	</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">101</th>
+                        <td>Sabana Africana</td>
+                        <td>Terrestre</td>
+                        <td>Zona Sur</td>
+                        <td>3000 m²</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">202</th>
+                        <td>Selva Tropical</td>
+                        <td>Terrestre</td>
+                        <td>Edificio Principal - Nivel 1</td>
+                        <td>1500 m²</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">303</th>
+                        <td>Aviario Principal</td>
+                        <td>Aéreo</td>
+                        <td>Zona Central - Cúpula</td>
+                        <td>800 m²</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">404</th>
+                        <td>Estanque de los Monos</td>
+                        <td>Acuático-Terrestre</td>
+                        <td>Zona Oeste</td>
+                        <td>500 m²</td>
+                    </tr>
+                </tbody>
+          </table>
+        </div>
+    </div>
+
+        
+    <div class="button-container"> 
+        <a href="inicio_sesion.html" class="btn btn-custom mx-2">Volver</a>
+        <button type="button" class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#registroVeterinarioModal">
+            Registrar Nuevo Ambiente
+        </button>
+      </div>
+      
+  <div class="modal fade" id="registroVeterinarioModal" tabindex="-1" aria-labelledby="registroVeterinarioModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="registroVeterinarioModalLabel">Registro de Ambiente</h1>         
+            </div>
+            <div class="modal-body">
+                <form id="registroVeterinarioForm">
+                    <div class="mb-3">
+                        <label for="nombreVeterinario" class="form-label">Nombre del Ambiente: </label>
+                        <input type="text" class="form-control" id="nombreambiente" placeholder="Ingrese el nombre del ambiente" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="especialidadVeterinario" class="form-label">Tipo de Ambiente:</label>
+                        <input type="text" class="form-control" id="tipoambiente" placeholder="Ingrese el tipo de ambiente" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="añosServicioVeterinario" class="form-label">Ubicación Geográfica:</label>
+                        <input type="text" class="form-control" id="ubicación" placeholder="Ingrese la ubicación del ambiente" min="0" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="añosServicioVeterinario" class="form-label">Superficie Total:</label>
+                        <input type="text" class="form-control" id="superficie" placeholder="Ingrese la superficie total del ambiente" min="0" required>
+                    </div>
+                    
+                
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn btn-custom" form="registroVeterinarioForm" id="guardarVeterinario">Guardar Ambiente</button>
+            </div>
+      </div>
+  </div>
+</div>
+
+  <script src="bootstrap/js/jquery-3.7.1min.js"></script>
+  <script src="bootstrap/js/popper.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
